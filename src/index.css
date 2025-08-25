@@ -158,6 +158,18 @@
     backdrop-filter: blur(10px);
   }
 
+  .text-syntax-keyword { color: hsl(var(--primary)); }
+  .text-syntax-string { color: hsl(var(--accent)); }
+  .text-syntax-comment { color: hsl(var(--muted-foreground)); opacity: 0.7; }
+  .text-syntax-number { color: hsl(var(--destructive)); }
+  .text-syntax-function { color: hsl(var(--secondary)); }
+  .text-syntax-variable { color: hsl(var(--primary)); }
+  .text-syntax-class { color: hsl(var(--accent)); }
+  .text-syntax-type { color: hsl(var(--secondary)); }
+  .text-syntax-property { color: hsl(var(--accent)); }
+  .text-syntax-method { color: hsl(var(--primary)); }
+  .text-syntax-operator { color: hsl(var(--muted-foreground)); }
+
   /* Pulse animation for metrics */
   .pulse-glow {
     animation: pulseGlow 2s ease-in-out infinite alternate;

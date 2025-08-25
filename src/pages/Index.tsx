@@ -1,9 +1,12 @@
 import NavigationHeader from "@/components/NavigationHeader";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
+import AIArchitectureSection from "@/components/AIArchitectureSection";
 import SecuritySection from "@/components/SecuritySection";
 import DatabaseSection from "@/components/DatabaseSection";
+import MemoryLearningSection from "@/components/MemoryLearningSection";
 import PerformanceSection from "@/components/PerformanceSection";
+import HackathonDemoSection from "@/components/HackathonDemoSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +23,11 @@ const Index = () => {
         <FeaturesSection />
       </div>
       
+      {/* AI Architecture Section */}
+      <div id="architecture">
+        <AIArchitectureSection />
+      </div>
+      
       {/* Security Section */}
       <div id="security">
         <SecuritySection />
@@ -30,9 +38,19 @@ const Index = () => {
         <DatabaseSection />
       </div>
       
+      {/* Memory & Learning Section */}
+      <div id="memory">
+        <MemoryLearningSection />
+      </div>
+      
       {/* Performance Section */}
       <div id="performance">
         <PerformanceSection />
+      </div>
+      
+      {/* Hackathon Demo Section */}
+      <div id="demo">
+        <HackathonDemoSection />
       </div>
       
       {/* Footer */}
