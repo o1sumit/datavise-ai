@@ -10,7 +10,6 @@ const NavigationHeader = () => {
     { label: "Security", href: "#security" },
     { label: "Performance", href: "#performance" },
     { label: "Databases", href: "#databases" },
-
   ];
 
   return (
@@ -24,7 +23,6 @@ const NavigationHeader = () => {
             </div>
             <div>
               <h1 className="font-bold text-xl gradient-text">Agentic AI</h1>
-              
             </div>
           </div>
 
@@ -47,9 +45,16 @@ const NavigationHeader = () => {
               <Github className="w-4 h-4 mr-2" />
             </Button> */}
 
-            <Button size="sm" className="btn-hero text-white">
-               Try Now
-              <ExternalLink className="w-4 h-4 ml-2" />
+            <Button size="sm" asChild className="btn-hero text-white">
+              <a
+                href="https://query-agent-flow.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                Docs
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
             </Button>
           </div>
 
@@ -60,7 +65,11 @@ const NavigationHeader = () => {
             className="md:hidden btn-glass"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMenuOpen ? (
+              <X className="w-5 h-5" />
+            ) : (
+              <Menu className="w-5 h-5" />
+            )}
           </Button>
         </div>
 
@@ -81,7 +90,11 @@ const NavigationHeader = () => {
             </nav>
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border/50">
-              <Button variant="ghost" size="sm" className="btn-glass justify-start">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="btn-glass justify-start"
+              >
                 <Github className="w-4 h-4 mr-2" />
                 GitHub Repository
               </Button>
