@@ -14,7 +14,7 @@ const MemoryLearningSection = () => {
       insights: "Prefers simple, direct queries with guided suggestions"
     },
     {
-      level: "Intermediate", 
+      level: "Intermediate",
       icon: TrendingUp,
       color: "primary",
       queries: ["Monthly sales by region", "Users who haven't logged in", "Top selling categories"],
@@ -24,7 +24,7 @@ const MemoryLearningSection = () => {
     {
       level: "Advanced",
       icon: Target,
-      color: "destructive", 
+      color: "destructive",
       queries: ["Complex analytics with CTEs", "Performance optimization", "Custom aggregation pipelines"],
       patterns: ["Complex subqueries", "Window functions", "Database tuning"],
       insights: "Focuses on optimization, requires detailed execution plans"
@@ -40,7 +40,7 @@ const MemoryLearningSection = () => {
     },
     {
       icon: MessageSquare,
-      title: "Session Context", 
+      title: "Session Context",
       description: "Remembers conversation history",
       examples: ["Database connection state", "Previous queries", "User preferences", "Error patterns"]
     },
@@ -53,11 +53,11 @@ const MemoryLearningSection = () => {
   ];
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
+    <section className="py-16 px-6 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
       {/* Background Effects */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -65,14 +65,14 @@ const MemoryLearningSection = () => {
             <Brain className="w-6 h-6 text-accent animate-pulse" />
             <span className="text-sm font-medium text-accent">Memory & Learning</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             AI That
             <span className="block gradient-text">Learns & Remembers</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Advanced user personalization with pattern recognition, contextual memory, and 
+            Advanced user personalization with pattern recognition, contextual memory, and
             adaptive learning that evolves with your database interaction patterns.
           </p>
         </div>
@@ -80,19 +80,18 @@ const MemoryLearningSection = () => {
         {/* Learning Profiles */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-center mb-12">User Learning Profiles</h3>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             {learningProfiles.map((profile, index) => (
-              <div 
+              <div
                 key={index}
-                className={`glass-card p-6 rounded-2xl cursor-pointer transition-all duration-500 hover-glow group ${
-                  activeProfile === index ? 'ring-2 ring-accent/50 shadow-glow scale-105' : ''
-                }`}
+                className={`glass-card p-6 rounded-2xl cursor-pointer transition-all duration-500 hover-glow group ${activeProfile === index ? 'ring-2 ring-accent/50 shadow-glow scale-105' : ''
+                  }`}
                 onMouseEnter={() => setActiveProfile(index)}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`w-12 h-12 bg-gradient-${profile.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <profile.icon className="w-6 h-6 text-primary-foreground" />
+                    <profile.icon className="w-6 h-6 text-primary-foreground text-white" />
                   </div>
                   <h4 className="text-xl font-bold">{profile.level}</h4>
                 </div>
@@ -134,17 +133,17 @@ const MemoryLearningSection = () => {
           <div className="glass-card p-6 rounded-2xl">
             <div className="flex items-center justify-center space-x-8">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground text-sm font-bold">B</div>
+                <div className="w-8 h-8 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground text-sm font-bold text-white">B</div>
                 <span className="text-sm">Beginner</span>
               </div>
               <div className="flex-1 h-1 bg-gradient-primary rounded-full opacity-50" />
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-bold">I</div>
+                <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-bold text-white">I</div>
                 <span className="text-sm">Intermediate</span>
               </div>
               <div className="flex-1 h-1 bg-gradient-primary rounded-full opacity-50" />
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-destructive rounded-full flex items-center justify-center text-destructive-foreground text-sm font-bold">A</div>
+                <div className="w-8 h-8 bg-gradient-destructive rounded-full flex items-center justify-center text-destructive-foreground text-sm font-bold text-white">A</div>
                 <span className="text-sm">Advanced</span>
               </div>
             </div>
@@ -158,10 +157,10 @@ const MemoryLearningSection = () => {
               <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <feature.icon className="w-6 h-6 text-primary-foreground" />
               </div>
-              
+
               <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
               <p className="text-muted-foreground mb-4">{feature.description}</p>
-              
+
               <div className="space-y-2">
                 {feature.examples.map((example, eIndex) => (
                   <div key={eIndex} className="flex items-center gap-2">
@@ -190,11 +189,11 @@ const MemoryLearningSection = () => {
                 <MessageSquare className="w-5 h-5 text-primary" />
                 Session Features
               </h4>
-              
+
               <div className="space-y-4">
                 {[
                   "Persistent conversation context across queries",
-                  "Database connection state memory", 
+                  "Database connection state memory",
                   "TTL-based message history cleanup",
                   "Cross-session pattern recognition"
                 ].map((feature, index) => (
@@ -213,11 +212,11 @@ const MemoryLearningSection = () => {
                 <div className="text-syntax-comment">// Session Context</div>
                 <div className="text-syntax-keyword">interface</div> <div className="text-syntax-type">SessionContext</div> {'{'}
                 <div className="ml-4">
-                  <div><div className="text-syntax-property">dbUrl</div>: <div className="text-syntax-type">string</div>;</div>
-                  <div><div className="text-syntax-property">dbType</div>: <div className="text-syntax-type">DatabaseType</div>;</div>
-                  <div><div className="text-syntax-property">userProfile</div>: <div className="text-syntax-type">LearningProfile</div>;</div>
-                  <div><div className="text-syntax-property">queryHistory</div>: <div className="text-syntax-type">QueryPattern</div>[];</div>
-                  <div><div className="text-syntax-property">preferences</div>: <div className="text-syntax-type">UserPreferences</div>;</div>
+                  <div className="flex"><div className="text-syntax-property">dbUrl</div>: <div className="text-syntax-type">string</div>;</div>
+                  <div className="flex"><div className="text-syntax-property">dbType</div>: <div className="text-syntax-type">DatabaseType</div>;</div>
+                  <div className="flex"><div className="text-syntax-property">userProfile</div>: <div className="text-syntax-type">LearningProfile</div>;</div>
+                  <div className="flex"><div className="text-syntax-property">queryHistory</div>: <div className="text-syntax-type">QueryPattern</div>[];</div>
+                  <div className="flex"><div className="text-syntax-property">preferences</div>: <div className="text-syntax-type">UserPreferences</div>;</div>
                 </div>
                 {'}'}
               </div>

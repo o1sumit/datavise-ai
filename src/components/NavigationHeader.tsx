@@ -10,7 +10,7 @@ const NavigationHeader = () => {
     { label: "Security", href: "#security" },
     { label: "Performance", href: "#performance" },
     { label: "Databases", href: "#databases" },
-    { label: "Documentation", href: "#docs" },
+
   ];
 
   return (
@@ -20,18 +20,18 @@ const NavigationHeader = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
-              <Brain className="w-6 h-6 text-primary-foreground" />
+              <Brain className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-xl gradient-text">AI Database Agent</h1>
-              <p className="text-xs text-muted-foreground">Revolutionary Intelligence</p>
+              <h1 className="font-bold text-xl gradient-text">Agentic AI</h1>
+              
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
-              <a 
+              <a
                 key={index}
                 href={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
@@ -43,20 +43,19 @@ const NavigationHeader = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="btn-glass">
+            {/* <Button variant="ghost" size="sm" className="btn-glass">
               <Github className="w-4 h-4 mr-2" />
-              GitHub
-            </Button>
-            
-            <Button size="sm" className="btn-hero">
-              Get Started
+            </Button> */}
+
+            <Button size="sm" className="btn-hero text-white">
+               Try Now
               <ExternalLink className="w-4 h-4 ml-2" />
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <Button
-            variant="ghost" 
+            variant="ghost"
             size="sm"
             className="md:hidden btn-glass"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -70,7 +69,7 @@ const NavigationHeader = () => {
           <div className="md:hidden mt-6 pb-6 border-t border-border/50">
             <nav className="flex flex-col gap-4 mt-6">
               {navItems.map((item, index) => (
-                <a 
+                <a
                   key={index}
                   href={item.href}
                   className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
@@ -80,13 +79,13 @@ const NavigationHeader = () => {
                 </a>
               ))}
             </nav>
-            
+
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border/50">
               <Button variant="ghost" size="sm" className="btn-glass justify-start">
                 <Github className="w-4 h-4 mr-2" />
                 GitHub Repository
               </Button>
-              
+
               <Button size="sm" className="btn-hero justify-start">
                 Get Started Now
                 <ExternalLink className="w-4 h-4 ml-2" />

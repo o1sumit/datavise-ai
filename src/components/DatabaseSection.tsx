@@ -42,7 +42,7 @@ const DatabaseSection = () => {
   }, []);
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-b from-muted/20 to-background">
+    <section className="py-16 px-6 relative overflow-hidden bg-gradient-to-b from-muted/20 to-background">
       {/* Background Effects */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />

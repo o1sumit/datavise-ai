@@ -67,7 +67,7 @@ const SecuritySection = () => {
   ];
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-b from-background to-muted/20">
+    <section className="py-16 px-6 relative overflow-hidden bg-gradient-to-b from-background to-muted/20">
       {/* Background Effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-destructive/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />

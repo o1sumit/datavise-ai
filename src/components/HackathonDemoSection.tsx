@@ -13,7 +13,7 @@ const HackathonDemoSection = () => {
       color: "primary"
     },
     {
-      title: "Dry Run Mode", 
+      title: "Dry Run Mode",
       icon: Eye,
       description: "Show plan generation without execution",
       features: ["Query validation", "Safety checks", "Execution preview"],
@@ -58,7 +58,7 @@ const HackathonDemoSection = () => {
     },
     {
       title: "AI That Learns",
-      description: "Personalization and memory system", 
+      description: "Personalization and memory system",
       icon: Users,
       metrics: ["3 Learning profiles", "Pattern recognition", "Contextual suggestions"]
     },
@@ -84,7 +84,7 @@ const HackathonDemoSection = () => {
       preview: "JSON visualization of query planning"
     },
     {
-      name: "Dry Run Toggle", 
+      name: "Dry Run Toggle",
       description: "Safe testing without data modification",
       icon: Shield,
       preview: "Toggle between preview and execution modes"
@@ -108,7 +108,7 @@ const HackathonDemoSection = () => {
       {/* Background Effects */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -116,14 +116,14 @@ const HackathonDemoSection = () => {
             <Play className="w-6 h-6 text-primary animate-pulse" />
             <span className="text-sm font-medium text-primary">Hackathon Demo</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Live Demo
             <span className="block gradient-text">Experience</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Interactive demonstration showcasing enterprise-grade AI database intelligence 
+            Interactive demonstration showcasing enterprise-grade AI database intelligence
             with military-level security and production-ready architecture.
           </p>
         </div>
@@ -131,18 +131,16 @@ const HackathonDemoSection = () => {
         {/* Demo Flow */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-center mb-12">Visual Demo Flow</h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {demoFlow.map((step, index) => (
-              <div 
+              <div
                 key={index}
-                className={`glass-card p-6 rounded-2xl cursor-pointer transition-all duration-500 hover-glow group ${
-                  activeDemoStep === index ? 'ring-2 ring-primary/50 shadow-glow scale-105' : ''
-                }`}
+                className={`glass-card p-6 rounded-2xl cursor-pointer transition-all duration-500 hover-glow group ${activeDemoStep === index ? 'ring-2 ring-primary/50 shadow-glow scale-105' : ''
+                  }`}
                 onMouseEnter={() => setActiveDemoStep(index)}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-${step.color} rounded-xl flex items-center justify-center text-2xl font-bold text-primary-foreground group-hover:scale-110 transition-transform`}>
+                  <div className={`w-12 h-12 bg-gradient-${step.color} rounded-xl flex items-center justify-center text-2xl font-bold text-white group-hover:scale-110 transition-transform`}>
                     {index + 1}
                   </div>
                   <step.icon className="w-6 h-6 text-primary" />
@@ -162,32 +160,12 @@ const HackathonDemoSection = () => {
               </div>
             ))}
           </div>
-
-          {/* Demo Flow Visualization */}
-          <div className="glass-card p-8 rounded-3xl">
-            <div className="flex items-center justify-between overflow-x-auto">
-              {demoFlow.map((step, index) => (
-                <div key={index} className="flex items-center min-w-0">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                    activeDemoStep === index 
-                      ? `bg-gradient-${step.color} text-primary-foreground shadow-glow scale-110` 
-                      : 'bg-muted/20 text-muted-foreground'
-                  }`}>
-                    <step.icon className="w-8 h-8" />
-                  </div>
-                  {index < demoFlow.length - 1 && (
-                    <div className="w-12 h-0.5 bg-gradient-primary mx-4 flex-shrink-0" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Key Selling Points */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-center mb-12">Key Selling Points</h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {sellingPoints.map((point, index) => (
               <div key={index} className="glass-card p-6 rounded-2xl hover-glow group">
@@ -230,9 +208,9 @@ const HackathonDemoSection = () => {
                   <feature.icon className="w-5 h-5 text-primary" />
                   <h4 className="font-bold">{feature.name}</h4>
                 </div>
-                
+
                 <p className="text-muted-foreground text-sm mb-4">{feature.description}</p>
-                
+
                 <div className="code-block p-3 rounded-lg text-xs">
                   {feature.preview}
                 </div>
@@ -240,23 +218,7 @@ const HackathonDemoSection = () => {
             ))}
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-12 p-8 bg-gradient-primary rounded-2xl">
-            <h4 className="text-2xl font-bold text-primary-foreground mb-4">
-              Experience the Future of Database Intelligence
-            </h4>
-            <p className="text-primary-foreground/80 mb-6">
-              Revolutionary AI that thinks, learns, and protects your data with military-grade security
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <button className="glass-card px-6 py-3 rounded-xl text-primary font-semibold hover-glow transition-all">
-                Live Demo
-              </button>
-              <button className="border border-primary-foreground/20 text-primary-foreground px-6 py-3 rounded-xl hover:bg-primary-foreground/10 transition-all">
-                View Documentation
-              </button>
-            </div>
-          </div>
+        
         </div>
       </div>
     </section>

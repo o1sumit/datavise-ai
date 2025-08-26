@@ -54,11 +54,10 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <Brain className="w-7 h-7 text-primary-foreground" />
+                <Brain className="w-7 h-7  text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-xl gradient-text">AI Database Agent</h3>
-                <p className="text-xs text-muted-foreground">Revolutionary Intelligence</p>
+                <h3 className="font-bold text-xl gradient-text">Agentic AI</h3>
               </div>
             </div>
             
@@ -106,46 +105,20 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Subscription */}
-        <div className="glass-card p-8 rounded-2xl mb-12 text-center">
-          <h3 className="text-2xl font-bold mb-4">Stay Updated with AI Database Innovation</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Get the latest updates on new features, performance improvements, and AI advancements 
-            delivered directly to your inbox.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-            <input 
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 rounded-xl bg-muted/50 border border-border/50 focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-            />
-            <Button className="btn-hero px-8 whitespace-nowrap">
-              Subscribe
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
-        </div>
+
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/50">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <div className="flex items-center gap-8 text-sm text-muted-foreground">
-              <span>© 2024 AI Database Agent. All rights reserved.</span>
+              <span>© 2025 AI Database Agent. All rights reserved.</span>
               <div className="hidden md:flex items-center gap-6">
                 <a href="#privacy" className="hover:text-primary transition-colors">Privacy</a>
                 <a href="#terms" className="hover:text-primary transition-colors">Terms</a>
                 <a href="#security" className="hover:text-primary transition-colors">Security</a>
               </div>
             </div>
-            
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>Built with ❤️ for developers worldwide</span>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span>All systems operational</span>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

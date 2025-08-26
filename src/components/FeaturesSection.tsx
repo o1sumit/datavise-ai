@@ -5,7 +5,7 @@ const features = [
   {
     icon: Brain,
     title: "Revolutionary AI Architecture",
-    subtitle: "Plan → Execute → Analyze Workflow",
+    subtitle: "Analyze Workflow",
     description: "Advanced AI pipeline with live dry-run previews, multi-database support, and intelligent decision making that understands context and prevents errors before they happen.",
     details: [
       "Live dry-run query previews with safety validation",
@@ -80,9 +80,9 @@ const FeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   
   return (
-    <section className="py-32 px-6 relative overflow-hidden">
+    <section className="py-16 px-6 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      <div className="absolute inset-0 bg-black" />
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
@@ -153,8 +153,8 @@ const FeaturesSection = () => {
         </div>
 
         {/* Workflow Visualization */}
-        <div className="mt-24 text-center">
-          <h3 className="text-3xl font-bold mb-12 gradient-text">Plan → Execute → Analyze Workflow</h3>
+        {/* <div className="mt-24 text-center">
+          <h3 className="text-3xl font-bold mb-12 gradient-text">Analyze Workflow</h3>
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
             {[
@@ -178,7 +178,7 @@ const FeaturesSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

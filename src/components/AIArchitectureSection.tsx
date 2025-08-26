@@ -13,13 +13,13 @@ const AIArchitectureSection = () => {
       color: "primary",
       features: [
         "Multi-step planning with JSON schema validation",
-        "Tool selection from 3 types: db_query, compute_statistics, llm_analysis", 
+        "Tool selection from 3 types: db_query, compute_statistics, llm_analysis",
         "Intelligent query generation for MongoDB, PostgreSQL, and MySQL",
         "Fallback mechanisms when planning fails"
       ]
     },
     {
-      title: "LangGraph State Machine", 
+      title: "LangGraph State Machine",
       subtitle: "DatabaseAgentService",
       icon: GitBranch,
       steps: ["Analyze", "Load Context", "Plan", "Execute", "Response"],
@@ -34,19 +34,19 @@ const AIArchitectureSection = () => {
   ];
 
   const architectureNodes = [
-    { name: "analyze_query", position: { x: 100, y: 50 }, type: "input" },
-    { name: "load_context", position: { x: 300, y: 50 }, type: "process" },
-    { name: "plan_execution", position: { x: 500, y: 50 }, type: "decision" },
-    { name: "execute_tools", position: { x: 700, y: 50 }, type: "action" },
-    { name: "generate_response", position: { x: 900, y: 50 }, type: "output" }
+    { name: "Analyze_Query", position: { x: 100, y: 50 }, type: "input" },
+    { name: "Load_Context", position: { x: 300, y: 50 }, type: "process" },
+    { name: "Plan_Execution", position: { x: 500, y: 50 }, type: "decision" },
+    { name: "Execute_Tools", position: { x: 700, y: 50 }, type: "action" },
+    { name: "Generate_Response", position: { x: 900, y: 50 }, type: "output" }
   ];
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-b from-muted/10 to-background">
+    <section className="py-16 px-6 relative overflow-hidden bg-gradient-to-b from-muted/10 to-background">
       {/* Background Effects */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -54,14 +54,14 @@ const AIArchitectureSection = () => {
             <Brain className="w-6 h-6 text-primary animate-pulse" />
             <span className="text-sm font-medium text-primary">Advanced AI Architecture</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Dual Workflow
             <span className="block gradient-text">AI System</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Revolutionary dual-brain architecture combining strategic planning with state-managed execution 
+            Revolutionary dual-brain architecture combining strategic planning with state-managed execution
             for unparalleled database intelligence and safety.
           </p>
         </div>
@@ -69,17 +69,16 @@ const AIArchitectureSection = () => {
         {/* Workflow Comparison */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {workflows.map((workflow, index) => (
-            <div 
+            <div
               key={index}
-              className={`glass-card p-8 rounded-3xl cursor-pointer transition-all duration-500 hover-glow group ${
-                activeWorkflow === index ? 'ring-2 ring-primary/50 shadow-glow scale-105' : ''
-              }`}
+              className={`glass-card p-8 rounded-3xl cursor-pointer transition-all duration-500 hover-glow group ${activeWorkflow === index ? 'ring-2 ring-primary/50 shadow-glow scale-105' : ''
+                }`}
               onMouseEnter={() => setActiveWorkflow(index)}
             >
               {/* Workflow Header */}
               <div className="flex items-center gap-4 mb-6">
                 <div className={`w-16 h-16 bg-gradient-${workflow.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                  <workflow.icon className="w-8 h-8 text-primary-foreground" />
+                  <workflow.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">{workflow.title}</h3>
@@ -90,8 +89,8 @@ const AIArchitectureSection = () => {
               {/* Workflow Steps */}
               <div className="flex items-center justify-between mb-6 p-4 bg-muted/10 rounded-xl">
                 {workflow.steps.map((step, stepIndex) => (
-                  <div key={stepIndex} className="flex items-center">
-                    <div className={`w-10 h-10 rounded-full bg-gradient-${workflow.color} flex items-center justify-center text-primary-foreground text-sm font-bold`}>
+                  <div key={stepIndex} className="flex items-center justify-center flex-col">
+                    <div className={`w-10 h-10 rounded-full bg-gradient-${workflow.color} flex items-center justify-center text-primary-foreground text-sm font-bold text-white gap-4`}>
                       {stepIndex + 1}
                     </div>
                     <div className="ml-2 text-sm font-medium">{step}</div>
@@ -130,14 +129,14 @@ const AIArchitectureSection = () => {
               {architectureNodes.map((node, index) => (
                 <div key={index} className="relative">
                   <div className={`w-20 h-20 rounded-xl flex items-center justify-center font-bold text-sm text-center leading-tight
-                    ${node.type === 'input' ? 'bg-gradient-primary text-primary-foreground' : 
-                      node.type === 'output' ? 'bg-gradient-accent text-accent-foreground' :
-                      'bg-gradient-muted text-muted-foreground'} 
+                    ${node.type === 'input' ? 'bg-gradient-primary text-white' :
+                      node.type === 'output' ? 'bg-gradient-accent text-white' :
+                        'bg-gradient-muted text-muted-foreground'} 
                     hover:scale-110 transition-transform cursor-pointer shadow-glow`}>
                     {node.name.replace('_', ' ')}
                   </div>
                   {index < architectureNodes.length - 1 && (
-                    <div className="absolute top-1/2 -right-8 w-16 h-0.5 bg-gradient-primary" />
+                    <div className="absolute top-1/2  h-0.5 bg-gradient-primary cus-width-wrap" />
                   )}
                 </div>
               ))}
@@ -169,26 +168,27 @@ const AIArchitectureSection = () => {
             <Workflow className="w-6 h-6 text-primary" />
             State Graph Implementation
           </h3>
-          
+
           <div className="code-block p-6 rounded-2xl font-mono text-sm overflow-x-auto">
             <div className="text-syntax-comment">// State Graph Architecture</div>
             <div><span className="text-syntax-keyword">const</span> <span className="text-syntax-variable">graph</span> = <span className="text-syntax-keyword">new</span> <span className="text-syntax-class">StateGraph</span>&lt;<span className="text-syntax-type">AgentState</span>&gt;({'{'}
-            <div className="ml-4">
-              <span className="text-syntax-property">channels</span>: {'{'}
               <div className="ml-4">
-                <div><span className="text-syntax-property">messages</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> x.<span className="text-syntax-method">concat</span>(y) {'}'},</div>
-                <div><span className="text-syntax-property">currentQuery</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> y ?? x {'}'},</div>
-                <div><span className="text-syntax-property">context</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> ({'{'}<span className="text-syntax-operator">...x</span>, <span className="text-syntax-operator">...y</span>{'}'}) {'}'},</div>
-                <div><span className="text-syntax-property">tools</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> y ?? x {'}'},</div>
+                <span className="text-syntax-property">channels</span>: {'{'}
+                <div className="ml-4">
+                  <div><span className="text-syntax-property">messages</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> x.<span className="text-syntax-method">concat</span>(y) {'}'},</div>
+                  <div><span className="text-syntax-property">currentQuery</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> y ?? x {'}'},</div>
+                  <div><span className="text-syntax-property">context</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> ({'{'}<span className="text-syntax-operator">...x</span>, <span className="text-syntax-operator">...y</span>{'}'}) {'}'},</div>
+                  <div><span className="text-syntax-property">tools</span>: {'{'} <span className="text-syntax-property">reducer</span>: <span className="text-syntax-function">(x, y) =&gt;</span> y ?? x {'}'},</div>
+                </div>
+                {'}'}
               </div>
-              {'}'}
-            </div>
             </div>
             {'}'})
           </div>
         </div>
       </div>
     </section>
+
   );
 };
 
