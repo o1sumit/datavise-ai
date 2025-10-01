@@ -75,7 +75,9 @@ const HeroSection = () => {
           </Button>
 
           <Button size="lg" variant="outline" className="btn-glass px-8 py-4 text-lg text-white">
+            <a href="https://youtube.com/playlist?list=PLtYQefvLuYtXnnh18EwA_SohtLdVfhDUL&si=PLmnc7BrOitVtXlm" target="_blank" rel="noopener noreferrer" className="flex items-center">
             Watch Demo
+            </a>
           </Button>
         </div>
 

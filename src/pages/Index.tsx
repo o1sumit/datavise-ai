@@ -7,6 +7,7 @@ import DatabaseSection from "@/components/DatabaseSection";
 import MemoryLearningSection from "@/components/MemoryLearningSection";
 import PerformanceSection from "@/components/PerformanceSection";
 import HackathonDemoSection from "@/components/HackathonDemoSection";
+import VideoSection from "@/components/VideoSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -51,6 +52,11 @@ const Index = () => {
       {/* Hackathon Demo Section */}
       <div id="demo">
         <HackathonDemoSection />
+      </div>
+      
+      {/* Video Showcase Section */}
+      <div id="videos">
+        <VideoSection />
       </div>
       
       {/* Footer */}
